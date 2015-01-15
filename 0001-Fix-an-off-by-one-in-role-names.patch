@@ -1,0 +1,30 @@
+From f6d6808515527467d789dff52415fa15d4dd4261 Mon Sep 17 00:00:00 2001
+From: Matthias Clasen <mclasen@redhat.com>
+Date: Fri, 12 Jul 2013 09:10:56 -0400
+Subject: [PATCH] Fix an off-by-one in role names
+
+This was causing atk_role_for_name to return ATK_ROLE_LEVEL_BAR
+when giving it an empty string, which strangely enough is something
+that the lsb testsuite checks...
+
+https://bugzilla.gnome.org/show_bug.cgi?id=704092
+---
+ atk/atkobject.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/atk/atkobject.c b/atk/atkobject.c
+index ea0df36..9a400d4 100755
+--- a/atk/atkobject.c
++++ b/atk/atkobject.c
+@@ -293,7 +293,7 @@ static const guint16 roles_offsets[] = {
+   751, 757, 769, 782, 791, 810, 816, 822, 
+   830, 845, 853, 858, 866, 883, 888, 893,
+   913, 923, 933, 954, 976, 990, 1003, 1018,
+-  1026, 1035, 1044, 1054, 1067, 1075
++  1026, 1035, 1044, 1054, 1067, 1076
+ };
+ 
+ /* This is a static assertion */
+-- 
+1.8.3.1
+
