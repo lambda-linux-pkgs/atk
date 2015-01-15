@@ -22,6 +22,9 @@ BuildRequires: gobject-introspection-devel >= %{gobject_introspection_version}
 BuildRequires: gtk-doc
 
 %description
+For package support, please visit
+https://github.com/lambda-linux-pkgs/%{name}/issues
+
 The ATK library provides a set of interfaces for adding accessibility
 support to applications and graphical user interface toolkits. By
 supporting the ATK interfaces, an application or toolkit can be used
@@ -34,6 +37,9 @@ Group: Development/Libraries
 Requires: %{name} = %{version}-%{release}
 
 %description devel
+For package support, please visit
+https://github.com/lambda-linux-pkgs/%{name}/issues
+
 This package includes libraries, header files, and developer documentation
 needed for development of applications or toolkits which use ATK.
 
