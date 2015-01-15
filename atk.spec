@@ -19,7 +19,7 @@ BuildRequires: gnome-doc-utils
 BuildRequires: gettext
 BuildRequires: gobject-introspection-devel >= %{gobject_introspection_version}
 # Bootstrap requirements
-BuildRequires: gnome-common gtk-doc
+BuildRequires: gtk-doc
 
 %description
 The ATK library provides a set of interfaces for adding accessibility
