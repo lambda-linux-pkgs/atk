@@ -79,6 +79,12 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 %{_datadir}/gir-1.0
 
 %changelog
+* Thu Jan 15 2015 Rajiv M Ranganath <rajiv.ranganath@atihita.com> 2.8.0-4
+- Adapt for AL/LL
+- Add package support URL
+- Update spec file
+- Import source package SL7/atk-2.8.0-4.el7
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2.8.0-4
 - Mass rebuild 2014-01-24
 
