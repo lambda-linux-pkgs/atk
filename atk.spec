@@ -1,10 +1,12 @@
+%define _buildid .1
+
 %define glib2_version 2.31.2
 %define gobject_introspection_version 0.9.6
 
 Summary: Interfaces for accessibility support
 Name: atk
 Version: 2.8.0
-Release: 4%{?dist}
+Release: 4%{?_buildid}%{?dist}
 License: LGPLv2+
 Group: System Environment/Libraries
 #VCS: git:git://git.gnome.org/atk
